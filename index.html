@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MENTAL HEATH - Sức Khỏe Tinh Thần</title>
+    <link rel="stylesheet" href='style.css'> 
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header class="main-header">
+            <h1 class="app-title">OASIS LAB – Nâng khu sức khỏe tinh thần</h1>
+            <div class="header-tools">
+                <span class="cloud-icon" title="Cài đặt">☁️</span>
+                <span class="help-text" title="Trợ giúp">help</span>
+            </div>
+        </header>
+
+        <nav class="main-nav">
+            <button class="nav-button active" data-tab="survey">Survey</button>
+            <button class="nav-button" data-tab="storage">Storage</button>
+            <button class="nav-button" data-tab="expert">Expert</button>
+        </nav>
+
+        <main class="main-content">
+            
+            <section id="survey" class="tab-content active">
+                <div class="content-panel survey-form-panel">
+                    <h2 class="panel-heading">Khảo sát Nhanh: 5 Phút Tinh Thần</h2>
+                    <form id="surveyForm">
+                        
+                        <div class="question-group">
+                            <label class="question-title" for="q1">1. Mức độ năng lượng của bạn trong tuần qua là:</label>
+                            <div class="rating-input">
+                                <input type="radio" id="q1_1" name="energy_level" value="1"><label for="q1_1">1</label>
+                                <input type="radio" id="q1_2" name="energy_level" value="2"><label for="q1_2">2</label>
+                                <input type="radio" id="q1_3" name="energy_level" value="3"><label for="q1_3">3</label>
+                                <input type="radio" id="q1_4" name="energy_level" value="4"><label for="q1_4">4</label>
+                                <input type="radio" id="q1_5" name="energy_level" value="5"><label for="q1_5">5</label>
+                            </div>
+                        </div>
+
+                        <div class="question-group">
+                            <label class="question-title" for="q2">2. Bạn cảm thấy giấc ngủ của mình chất lượng như thế nào?</label>
+                            <div class="rating-input">
+                                <input type="radio" id="q2_1" name="sleep_quality" value="1"><label for="q2_1">1</label>
+                                <input type="radio" id="q2_2" name="sleep_quality" value="2"><label for="q2_2">2</label>
+                                <input type="radio" id="q2_3" name="sleep_quality" value="3"><label for="q2_3">3</label>
+                                <input type="radio" id="q2_4" name="sleep_quality" value="4"><label for="q2_4">4</label>
+                                <input type="radio" id="q2_5" name="sleep_quality" value="5"><label for="q2_5">5</label>
+                            </div>
+                        </div>
+
+                         <div class="question-group">
+                            <label class="question-title" for="q3">3. Bạn có dễ dàng tập trung vào công việc/học tập không?</label>
+                            <div class="rating-input">
+                                <input type="radio" id="q3_1" name="focus_ability" value="1"><label for="q3_1">1</label>
+                                <input type="radio" id="q3_2" name="focus_ability" value="2"><label for="q3_2">2</label>
+                                <input type="radio" id="q3_3" name="focus_ability" value="3"><label for="q3_3">3</label>
+                                <input type="radio" id="q3_4" name="focus_ability" value="4"><label for="q3_4">4</label>
+                                <input type="radio" id="q3_5" name="focus_ability" value="5"><label for="q3_5">5</label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-footer">
+                             <p class="form-note">
+                                (Hoàn thành khảo sát để nhận được lời khuyên cá nhân hóa từ OASIS LAB)
+                            </p>
+                            <button type="submit" class="submit-button">Xem Kết Quả Đánh Giá</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="content-panel result-panel">
+                    <h2 class="panel-heading">Kết quả Đánh giá & Gợi ý:</h2>
+                    <div id="resultOutput" class="result-details">
+                        <p class="initial-message">Vui lòng hoàn thành khảo sát để xem kết quả.</p>
+                        <div class="result-suggestion">
+                            <hr class="scribble-line">
+                            <hr class="scribble-line">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="storage" class="tab-content hidden">
+                <div class="content-panel history-panel">
+                    <h2 class="panel-heading">Lịch sử Khảo sát Đã Lưu:</h2>
+                    <ul id="storageList" class="chat-list">
+                        <li class="chat-item">1. 2024-10-28: Điểm 12/15 (Micro-meets)</li>
+                        <li class="chat-item">2. 2024-10-21: Điểm 9/15 (Time-out)</li>
+                        <li class="chat-item separator-line"></li>
+                        <li class="chat-item separator-line"></li>
+                    </ul>
+                </div>
+                
+                <div class="content-panel connect-panel">
+                    <h2 class="panel-heading">Connect (Kết nối Bạn bè)</h2>
+                    <p class="sub-heading">Thêm bạn bè để tham gia Micro-meets!</p>
+                    <div class="contact-card">
+                        <div class="avatar-placeholder"></div>
+                        <span class="contact-name">tên: [Bạn bè 1]</span>
+                        <span class="contact-status status-online">Online</span>
+                    </div>
+                    <div class="contact-card">
+                        <div class="avatar-placeholder"></div>
+                        <span class="contact-name">tên: [Bạn bè 2]</span>
+                        <span class="contact-status status-offline">Offline</span>
+                    </div>
+                </div>
+            </section>
+
+            <section id="expert" class="tab-content hidden">
+                 <div class="content-panel expert-profile-panel">
+                    <h2 class="panel-heading">Chuyên gia Trị liệu Tinh thần Tự động</h2>
+                    <div class="profile-card">
+                        <div class="avatar-placeholder large"></div>
+                        <p class="profile-detail">**tên:** Dr. OASIS (AI Expert)</p>
+                        <p class="profile-detail">**Chuyên:** Gợi ý hành vi & Micro-Treats</p>
+                        <p class="profile-detail bio">**bio:** Hệ thống AI được đào tạo để cung cấp hỗ trợ sơ cấp về sức khỏe tinh thần và đưa ra các hành động nhỏ, hiệu quả.</p>
+                        <hr>
+                        <p class="resource-info">
+                            Tài nguyên liên quan: **Thiền định**, **Journaling**, **Podcast chữa lành**.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="content-panel expert-chat-panel">
+                    <div class="chat-header">
+                        <div class="avatar-placeholder small"></div>
+                        <span class="chat-expert-name">Chat với Dr. OASIS</span>
+                        <hr>
+                    </div>
+                    <div class="chat-window" id="expertChatWindow">
+                        <div class="chat-bubble expert-bubble">Xin chào, tôi là Dr. OASIS. Bạn cảm thấy thế nào hôm nay?</div>
+                        </div>
+                    <div class="chat-input-area">
+                        <input type="text" id="chatInput" placeholder="Nhập tin nhắn của bạn...">
+                        <button id="chatSendButton">Gửi</button>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src='script.js'></script>
+</body>
+</html>
